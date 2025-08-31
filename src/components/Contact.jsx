@@ -58,7 +58,7 @@ const Contact = () => {
                 {t('contact.linkedin')}
               </h3>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/benrueckert/" 
                 className="flex items-center justify-center md:justify-start gap-2 text-lg font-medium hover:underline transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,7 +74,7 @@ const Contact = () => {
                 {t('contact.github')}
               </h3>
               <a 
-                href="#" 
+                href="https://github.com/benrueckert" 
                 className="flex items-center justify-center md:justify-start gap-2 text-lg font-medium hover:underline transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
