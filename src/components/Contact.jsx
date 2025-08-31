@@ -1,30 +1,28 @@
-import { useState } from 'react';
 import { LinkedinLogo, GithubLogo } from 'phosphor-react';
 import { useTranslation } from '../contexts/TranslationContext';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [state, handleSubmit] = useForm("xvgbrldg");
 
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simple demo functionality - just show success message
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-      // Hide success message after 5 seconds
-      setTimeout(() => setShowSuccess(false), 5000);
-    }, 1000);
-  };
+  // Handle success state like in the official example
+  if (state.succeeded) {
+    return (
+      <section id="contact" className="py-16">
+        <div className="container fade-in">
+          <h2 className="text-3xl font-bold mb-2">{t('contact.title')}</h2>
+          <div className="form-success">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="font-medium">{t('contact.form.success.title')}</span>
+            </div>
+            <p className="mt-1">{t('contact.form.success.text')}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" className="py-16">
@@ -92,6 +90,7 @@ const Contact = () => {
             <h3 className="text-xl font-semibold mb-8">{t('contact.sendMessage')}</h3>
             
             <form onSubmit={handleSubmit} className="space-y-4">
+              <input type="hidden" name="_subject" value="Portfolio Contact Form" />
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">
@@ -100,11 +99,14 @@ const Contact = () => {
                   <input
                     type="text"
                     name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
                     className="form-input"
                     placeholder={t('contact.form.namePlaceholder')}
                     required
+                  />
+                  <ValidationError 
+                    prefix="Name" 
+                    field="name"
+                    errors={state.errors}
                   />
                 </div>
                 <div>
@@ -114,11 +116,14 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
                     className="form-input"
                     placeholder={t('contact.form.emailPlaceholder')}
                     required
+                  />
+                  <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
                   />
                 </div>
               </div>
@@ -129,33 +134,25 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
                   rows={6}
                   className="form-input resize-none"
                   placeholder={t('contact.form.messagePlaceholder')}
                   required
                 />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                />
               </div>
               
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className={`btn-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                disabled={state.submitting}
+                className={`btn-primary ${state.submitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
+                {state.submitting ? t('contact.form.sending') : t('contact.form.send')}
               </button>
-
-              {/* Success Message */}
-              {showSuccess && (
-                <div className="form-success">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="font-medium">{t('contact.form.success.title')}</span>
-                  </div>
-                  <p className="mt-1">{t('contact.form.success.text')}</p>
-                </div>
-              )}
 
             </form>
           </div>
