@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { TranslationProvider, useTranslation } from './contexts/TranslationContext';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { Sun, Moon, List, X } from 'phosphor-react';
@@ -6,8 +7,11 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+import CookieConsent from './components/CookieConsent';
+import { Impressum, Datenschutz } from './components/LegalPages';
 
-function NavigationContent() {
+function MainPage() {
   const { t, language, toggleLanguage } = useTranslation();
   const { toggleTheme, isDark } = useTheme();
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -208,7 +212,31 @@ function NavigationContent() {
       <div id="contact">
         <Contact />
       </div>
+      <Footer />
+      
+      {/* Cookie Consent Banner */}
+      <CookieConsent />
     </div>
+  );
+}
+
+function NavigationContent() {
+  const location = useLocation();
+  const isLegalPage = location.pathname === '/impressum' || location.pathname === '/datenschutz';
+
+  if (isLegalPage) {
+    return (
+      <Routes>
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+      </Routes>
+    );
+  }
+
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+    </Routes>
   );
 }
 
@@ -216,7 +244,9 @@ function App() {
   return (
     <ThemeProvider>
       <TranslationProvider>
-        <NavigationContent />
+        <Router>
+          <NavigationContent />
+        </Router>
       </TranslationProvider>
     </ThemeProvider>
   );

@@ -111,12 +111,67 @@ const translations = {
         messagePlaceholder: 'Tell me about your project...',
         send: 'Send Message',
         sending: 'Sending...',
+        consent: 'I agree to the processing of my personal data according to the',
+        consentSuffix: '. *',
+        privacyPolicy: 'Privacy Policy',
         success: {
           title: 'Message sent successfully!',
           text: "Thank you for reaching out. I'll get back to you within 24 hours."
         }
       },
       responseTime: 'Response time: Usually within 24 hours'
+    },
+    // Footer
+    footer: {
+      allRightsReserved: 'All rights reserved',
+      impressum: 'Impressum',
+      privacy: 'Privacy Policy'
+    },
+    // Legal Pages
+    legal: {
+      backToHome: 'Back to Home',
+      impressum: {
+        title: 'Impressum',
+        contact: 'Contact Information',
+        profession: 'Frontend Developer',
+        email: 'Email',
+        responsibility: 'Responsible for Content',
+        responsibilityText: 'Ben Rückert is responsible for the content of this website according to § 7, para. 1 of the TMG (Telemediengesetz - Telemedia Act).',
+        disclaimer: 'Disclaimer',
+        disclaimerText: 'Despite careful control of the content, we assume no liability for the content of external links. The operators of linked pages are solely responsible for their content.'
+      },
+      privacy: {
+        title: 'Privacy Policy',
+        overview: 'Overview',
+        overviewText: 'This privacy policy explains what personal data we collect when you use this website and how we use it.',
+        dataController: 'Data Controller',
+        email: 'Email',
+        contactForm: 'Contact Form',
+        contactFormText: 'When you use our contact form, we collect your name, email address, and message. This data is used solely to process your inquiry and respond to you.',
+        legalBasis: 'Legal Basis',
+        legalBasisText: 'Art. 6(1)(a) GDPR - Consent for contact form processing.',
+        cookies: 'Cookies and Tracking',
+        cookiesText: 'This website uses third-party services that may set cookies for analytics and functionality purposes.',
+        formspree: 'Third-Party Service: Formspree',
+        formspreeText: 'Our contact form uses Formspree (US company) to process form submissions. Formspree may set analytics cookies (Google Analytics, Amplitude, PostHog) when you visit pages containing the form. Your form data is transmitted to Formspree servers and then forwarded to our email.',
+        formspreePolicy: 'Formspree Privacy Policy',
+        hosting: 'Hosting: Vercel',
+        hostingText: 'This website is hosted on Vercel (US company). Vercel may set technical and performance cookies for hosting functionality. Server logs may temporarily store your IP address.',
+        vercelPolicy: 'Vercel Privacy Policy',
+        localStorage: 'Local Storage',
+        localStorageText: 'We use browser localStorage to save your theme and language preferences. This data remains on your device and is not transmitted to us.',
+        rights: 'Your Rights',
+        rightsText: 'You have the right to access, correct, delete, or port your personal data. Contact us at hi@benrueckert.com to exercise these rights.',
+        externalLinks: 'External Links',
+        externalLinksText: 'Our website contains links to LinkedIn and GitHub. These external sites have their own privacy policies and we are not responsible for their content or data practices.'
+      }
+    },
+    // Cookie Consent
+    cookies: {
+      message: 'We use cookies to enhance your experience and analyze usage through third-party services.',
+      privacyPolicy: 'Privacy Policy',
+      acceptAll: 'Accept All',
+      decline: 'Decline'
     }
   },
   de: {
@@ -229,12 +284,67 @@ const translations = {
         messagePlaceholder: 'Erzählen Sie mir von Ihrem Projekt...',
         send: 'Nachricht senden',
         sending: 'Wird gesendet...',
+        consent: 'Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der',
+        consentSuffix: ' zu. *',
+        privacyPolicy: 'Datenschutzerklärung',
         success: {
           title: 'Nachricht erfolgreich gesendet!',
           text: 'Vielen Dank für Ihre Nachricht. Ich melde mich innerhalb von 24 Stunden bei Ihnen.'
         }
       },
       responseTime: 'Antwortzeit: Normalerweise innerhalb von 24 Stunden'
+    },
+    // Footer
+    footer: {
+      allRightsReserved: 'Alle Rechte vorbehalten',
+      impressum: 'Impressum',
+      privacy: 'Datenschutz'
+    },
+    // Legal Pages
+    legal: {
+      backToHome: 'Zurück zur Startseite',
+      impressum: {
+        title: 'Impressum',
+        contact: 'Kontaktinformationen',
+        profession: 'Frontend-Entwickler',
+        email: 'E-Mail',
+        responsibility: 'Verantwortlich für den Inhalt',
+        responsibilityText: 'Ben Rückert ist verantwortlich für den Inhalt dieser Website gemäß § 7 Abs. 1 TMG (Telemediengesetz).',
+        disclaimer: 'Haftungsausschluss',
+        disclaimerText: 'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.'
+      },
+      privacy: {
+        title: 'Datenschutzerklärung',
+        overview: 'Überblick',
+        overviewText: 'Diese Datenschutzerklärung erklärt, welche personenbezogenen Daten wir bei der Nutzung dieser Website erheben und wie wir sie verwenden.',
+        dataController: 'Verantwortlicher',
+        email: 'E-Mail',
+        contactForm: 'Kontaktformular',
+        contactFormText: 'Wenn Sie unser Kontaktformular verwenden, erheben wir Ihren Namen, Ihre E-Mail-Adresse und Ihre Nachricht. Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage und zur Antwort verwendet.',
+        legalBasis: 'Rechtsgrundlage',
+        legalBasisText: 'Art. 6 Abs. 1 lit. a DSGVO - Einwilligung zur Kontaktformular-Verarbeitung.',
+        cookies: 'Cookies und Tracking',
+        cookiesText: 'Diese Website verwendet Drittanbieter-Services, die Cookies für Analyse- und Funktionszwecke setzen können.',
+        formspree: 'Drittanbieter-Service: Formspree',
+        formspreeText: 'Unser Kontaktformular nutzt Formspree (US-Unternehmen) zur Verarbeitung von Formularübermittlungen. Formspree kann Analyse-Cookies (Google Analytics, Amplitude, PostHog) setzen, wenn Sie Seiten mit dem Formular besuchen. Ihre Formulardaten werden an Formspree-Server übertragen und dann an unsere E-Mail weitergeleitet.',
+        formspreePolicy: 'Formspree Datenschutzerklärung',
+        hosting: 'Hosting: Vercel',
+        hostingText: 'Diese Website wird auf Vercel (US-Unternehmen) gehostet. Vercel kann technische und Performance-Cookies für Hosting-Funktionen setzen. Server-Logs können Ihre IP-Adresse temporär speichern.',
+        vercelPolicy: 'Vercel Datenschutzerklärung',
+        localStorage: 'Local Storage',
+        localStorageText: 'Wir verwenden Browser-localStorage, um Ihre Theme- und Spracheinstellungen zu speichern. Diese Daten verbleiben auf Ihrem Gerät und werden nicht an uns übertragen.',
+        rights: 'Ihre Rechte',
+        rightsText: 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung oder Übertragung Ihrer personenbezogenen Daten. Kontaktieren Sie uns unter hi@benrueckert.com, um diese Rechte auszuüben.',
+        externalLinks: 'Externe Links',
+        externalLinksText: 'Unsere Website enthält Links zu LinkedIn und GitHub. Diese externen Seiten haben ihre eigenen Datenschutzerklärungen und wir sind nicht für deren Inhalt oder Datenpraktiken verantwortlich.'
+      }
+    },
+    // Cookie Consent
+    cookies: {
+      message: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und die Nutzung über Drittanbieter-Services zu analysieren.',
+      privacyPolicy: 'Datenschutzerklärung',
+      acceptAll: 'Alle akzeptieren',
+      decline: 'Ablehnen'
     }
   }
 };

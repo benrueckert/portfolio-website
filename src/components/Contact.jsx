@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { LinkedinLogo, GithubLogo } from 'phosphor-react';
 import { useTranslation } from '../contexts/TranslationContext';
 import { useForm, ValidationError } from '@formspree/react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const { t } = useTranslation();
   const [state, handleSubmit] = useForm("xvgbrldg");
+  const [privacyConsent, setPrivacyConsent] = useState(false);
 
   // Handle success state like in the official example
   if (state.succeeded) {
@@ -145,11 +148,31 @@ const Contact = () => {
                   errors={state.errors}
                 />
               </div>
+
+              {/* Privacy Consent */}
+              <label htmlFor="privacy-consent" className="premium-checkbox">
+                <input
+                  type="checkbox"
+                  id="privacy-consent"
+                  checked={privacyConsent}
+                  onChange={(e) => setPrivacyConsent(e.target.checked)}
+                  required
+                  className="premium-checkbox-input"
+                />
+                <div className="premium-checkbox-box"></div>
+                <span className="premium-checkbox-label">
+                  {t('contact.form.consent')}{' '}
+                  <Link to="/datenschutz" className="premium-link">
+                    {t('contact.form.privacyPolicy')}
+                  </Link>
+                  {t('contact.form.consentSuffix')}
+                </span>
+              </label>
               
               <button
                 type="submit"
-                disabled={state.submitting}
-                className={`btn-primary ${state.submitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                disabled={state.submitting || !privacyConsent}
+                className={`btn-primary ${(state.submitting || !privacyConsent) ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {state.submitting ? t('contact.form.sending') : t('contact.form.send')}
               </button>
