@@ -84,9 +84,9 @@ const translations = {
     // About Section
     about: {
       title: 'About',
-      intro: "Hi, I'm Ben Rückert - a frontend developer focused on React and modern web technologies.",
-      experience: "I have worked as a freelance web developer, creating real websites for clients. At the same time, I build my own side projects to push my skills and bring creative ideas to life.",
-      philosophy: "My focus is on clean code, intuitive user experience, and engaging interfaces. I believe in building fast, accessible, and user-friendly applications.",
+      intro: "Hi, I'm Ben Rückert – an aspiring frontend developer focused on React and modern web technologies.",
+      experience: "I develop my own projects to expand my skills and bring creative ideas to life.",
+      philosophy: "My focus is on clean code, intuitive user experience, and engaging interfaces.",
       techStack: 'Tech Stack',
       currentlyLearning: 'Currently learning:',
       typescript: 'TypeScript'
@@ -257,9 +257,9 @@ const translations = {
     // About Section
     about: {
       title: 'Über mich',
-      intro: "Hallo, ich bin Ben Rückert - ein Frontend-Entwickler mit Fokus auf React und moderne Web-Technologien.",
-      experience: "Ich arbeite als freiberuflicher Web-Entwickler und erstelle echte Websites für Kunden. Gleichzeitig entwickle ich eigene Side-Projekte, um meine Fähigkeiten zu erweitern und kreative Ideen zum Leben zu erwecken.",
-      philosophy: "Mein Fokus liegt auf sauberem Code, intuitiver Benutzererfahrung und ansprechenden Benutzeroberflächen. Ich glaube daran, schnelle, barrierefreie und benutzerfreundliche Anwendungen zu entwickeln.",
+      intro: "Hallo, ich bin Ben Rückert – ein angehender Frontend-Entwickler mit Fokus auf React und moderne Web-Technologien.",
+      experience: "Ich entwickle eigene Projekte, um meine Fähigkeiten auszubauen und kreative Ideen zum Leben zu erwecken.",
+      philosophy: "Mein Schwerpunkt liegt auf sauberem Code, intuitiver Benutzererfahrung und ansprechenden Benutzeroberflächen.",
       techStack: 'Tech Stack',
       currentlyLearning: 'Derzeit lerne ich:',
       typescript: 'TypeScript'
