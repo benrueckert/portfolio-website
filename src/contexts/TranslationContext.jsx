@@ -43,9 +43,9 @@ const translations = {
       },
       personalProjects: [
         {
-          title: "Smart Recipe Finder",
-          description: "Enter ingredients → discover fitting recipes. Focus on usability and smooth experience.",
-          tech: "React, Tailwind, API integration"
+          title: "Tech Glossary Webapp",
+          description: "Search and explore IT & web development terms with clear definitions, code examples, and cross-references. Focus on clean UX and intuitive navigation.",
+          tech: "React, Tailwind, Fuse.js (search),"
         },
         {
           title: "Koda (Flashcard App)",
@@ -195,7 +195,7 @@ const translations = {
     // Projects Section
     projects: {
       title: 'Projekte',
-      subtitle: 'Persönliche Projekte und Kundenarbeiten',
+      subtitle: 'Persönliche Projekte und Kundenprojekte',
       personal: 'Persönliche Projekte',
       client: 'Kundenprojekte',
       clientSubtitle: 'WordPress-Websites für Kunden',
@@ -216,9 +216,9 @@ const translations = {
       },
       personalProjects: [
         {
-          title: "Smart Recipe Finder",
-          description: "Zutaten eingeben → passende Rezepte entdecken. Fokus auf Benutzerfreundlichkeit und flüssige Erfahrung.",
-          tech: "React, Tailwind, API-Integration"
+          title: "Tech Glossary Webapp",
+          description: "Suche und entdecke IT- und Webentwicklungs-Begriffe mit klaren Definitionen, Code-Beispielen und Querverweisen. Fokus auf saubere UX und intuitive Navigation.",
+          tech: "React, Tailwind, Fuse.js (Suche)"
         },
         {
           title: "Koda (Karteikarten-App)",
