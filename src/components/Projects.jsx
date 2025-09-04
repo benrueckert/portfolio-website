@@ -6,7 +6,7 @@ const Projects = () => {
   // Static URLs that don't change
   const projectUrls = {
     personal: [
-      { githubUrl: "https://github.com/benrueckert/smart-recipe-finder" },
+      { githubUrl: "https://github.com/benrueckert/tech-glossary.git" },
       { githubUrl: "https://github.com/benrueckert/koda-flashcard-app" },
       { demoUrl: "https://www.giftioapp.com/" }
     ],
